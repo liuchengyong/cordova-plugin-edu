@@ -1,41 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com-luoteng-folk"
+        id="com-luoteng-edu"
         version="0.7.1">
 
-  <name>Folk</name>
+  <name>edu</name>
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
   </engines>
 
- <asset src="www/folk.js" target="js/folk.js"/>
+  <asset src="www/edu.js" target="js/edu.js"/>
 
-  <js-module src="www/folk.js" name="folk">
-    <clobbers target="folk" />
+  <js-module src="www/edu.js" name="edu">
+    <clobbers target="edu" />
   </js-module>
+
+  <!-- android -->
   <platform name="android">
-
     <config-file target="res/xml/config.xml" parent="/*">
-	 <feature name="Folk">
-        <param name="android-package" value="com.luoteng.folk.plugins.FolkPlugin" />
-    </feature>
+  	  <feature name="Edu">
+        <param name="android-package" value="com.luoteng.edu.EduPlugin" />
+      </feature>
     </config-file>
-
-	<source-file src="src/android/com/luoteng/folk/plugins/FolkPlugin.java" target-dir="src/com/luoteng/folk/plugins"/>
+	  <source-file src="src/android/com/luoteng/edu/EduPlugin.java" target-dir="src/android/com/luoteng/edu"/>
   </platform>
 
     <!-- ios -->
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="Folk">
-                <param name="ios-package" value="CDVNotification"/>
-            </feature>
-        </config-file>
-        <header-file src="src/ios/CDVNotification.h" />
-        <source-file src="src/ios/CDVNotification.m" />
-        <resource-file src="src/ios/CDVNotification.bundle" />
-        <framework src="AudioToolbox.framework" weak="true" />
-    </platform>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Edu">
+        <param name="ios-package" value="EduPlugin"/>
+      </feature>
+    </config-file>
+    <header-file src="src/ios/EduPlugin.h" />
+    <source-file src="src/ios/EduPlugin.m" />
+  </platform>
 
 </plugin>
