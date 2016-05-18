@@ -9,7 +9,6 @@
 
   -(void)imageShow:(CDVInvokedUrlCommand *)command;//图片轮播
   -(void)goLogin:(CDVInvokedUrlCommand *)command; //去登录页面
-  -(void)getToken:(CDVInvokedUrlCommand *)command;//获得当前用户的token
   -(void)showToast:(CDVInvokedUrlCommand *)command;//客户端的Toast 
 
 
