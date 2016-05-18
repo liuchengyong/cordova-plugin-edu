@@ -1,8 +1,11 @@
 module.exports = {
 
     // 公共的方法
-    imageShow: function(name, successCallback, errorCallback, isDebug) { //图片轮播
-        cordova.exec(successCallback, errorCallback, "Edu", "imageShow", [name]);
+    getPageInit: function(mag, successCallback, errorCallback, isDebug) { //图片轮播
+        cordova.exec(successCallback, errorCallback, "Edu", "getPageInit", [mag]);
+    },
+    imageShow: function(msg, successCallback, errorCallback, isDebug) { //图片轮播
+        cordova.exec(successCallback, errorCallback, "Edu", "imageShow", [msg]);
     },
     goLogin: function(successCallback, errorCallback) { //去登录页面
         cordova.exec(successCallback, errorCallback, "Edu", "goLogin", []);

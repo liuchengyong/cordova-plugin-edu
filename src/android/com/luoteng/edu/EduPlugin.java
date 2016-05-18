@@ -9,7 +9,11 @@ public class EduPlugin extends CordovaPlugin {
     public boolean execute(String action, CordovaArgs args, final CallbackContext callbackContext) throws JSONException {
 
         //common function
-        if(action.equals("imageShow")){ //图片轮播
+        if(action.equals("getPageInit")){
+            String params = args.getString(0);
+            callbackContext.success(params);
+            return true;
+        }else if(action.equals("imageShow")){ //图片轮播
             String params = args.getString(0);
             callbackContext.success(params);
             return true;
