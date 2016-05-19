@@ -26,10 +26,7 @@ public class EduPlugin extends CordovaPlugin {
         }
 
         // news detail page 
-        if (action.equals("topicDetail")) { //跳转点师详情
-            callbackContext.success(args.getString(0));
-            return true;
-        }else if(action.equals("getArticleDetail")) { //获取资讯详情id
+        if (action.equals("jumpToApp")) { //跳转点师详情
             callbackContext.success(args.getString(0));
             return true;
         }else if(action.equals("commentsList")){ //跳转资讯详情评论列表

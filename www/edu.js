@@ -15,14 +15,11 @@ module.exports = {
     },
 
     //  资讯详情页
-    getArticleDetail: function(msg,successCallback,errorCallback) { //获取资讯详情id和token
-        cordova.exec(successCallback, errorCallback, "Edu", "getArticleDetail", [msg]);
-    },
     commentsList: function(articleId, successCallback, errorCallback) { //跳转资讯评论列表
         cordova.exec(successCallback, errorCallback, "Edu", "commentsList", [articleId]);
     },
-    topicDetail: function(name, successCallback, errorCallback) { //跳转话题详情页面
-        cordova.exec(successCallback, errorCallback, "Edu", "topicDetail", [name]);
+    jumpToApp: function(name, successCallback, errorCallback) { //跳转话题详情页面
+        cordova.exec(successCallback, errorCallback, "Edu", "jumpToApp", [name]);
     },
     refreshCommentNum: function(articleId, successCallback, errorCallback) { //通知移动端跟新评论数量
         cordova.exec(successCallback, errorCallback, "Edu", "refreshCommentNum", [articleId]);

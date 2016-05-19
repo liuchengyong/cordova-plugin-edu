@@ -44,13 +44,6 @@
 *资讯详情页
 *
 */
--(void)getArticleDetail:(CDVInvokedUrlCommand *)command //获取资讯详情id
-{
-  NSArray *arguments = command.arguments;
-  CDVPluginResult* result;
-  result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:arguments.firstObject];
-  [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
-}
 
 -(void)commentsList:(CDVInvokedUrlCommand *)command // 跳转资讯评论列表
 {
@@ -60,7 +53,7 @@
    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
--(void)topicDetail:(CDVInvokedUrlCommand *)command // 跳转点师详情
+-(void)jumpToApp:(CDVInvokedUrlCommand *)command // 跳转点师详情
 {
     NSArray *arguments = command.arguments;
     CDVPluginResult* result;
