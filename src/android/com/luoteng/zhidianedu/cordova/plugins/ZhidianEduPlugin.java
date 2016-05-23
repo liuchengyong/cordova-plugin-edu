@@ -1,11 +1,11 @@
-package com.luoteng.edu;
+package com.luoteng.zhidianedu.cordova.plugins;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONException;
 
 
-public class EduPlugin extends CordovaPlugin {
+public class ZhidianEduPlugin extends CordovaPlugin {
     public boolean execute(String action, CordovaArgs args, final CallbackContext callbackContext) throws JSONException {
 
         //common function
