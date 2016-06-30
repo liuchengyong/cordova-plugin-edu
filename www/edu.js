@@ -13,6 +13,9 @@ module.exports = {
     showToast: function(msg, successCallback, errorCallback, isDebug) { //show tooltip
         cordova.exec(successCallback, errorCallback, "Edu", "showToast", [msg]);
     },
+    doShare: function(msg, successCallback, errorCallback, isDebug) { //set share
+        cordova.exec(successCallback, errorCallback, "Edu", "doShare", [msg]);
+    },
 
     //  资讯详情页
     commentsList: function(articleId, successCallback, errorCallback) { //跳转资讯评论列表

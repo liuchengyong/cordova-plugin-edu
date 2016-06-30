@@ -39,6 +39,16 @@
    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
+-(void)doShare:(CDVInvokedUrlCommand *)command //客户端的Toast 
+{
+   NSArray *arguments = command.arguments;
+   CDVPluginResult* result;
+   result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:arguments.firstObject];
+   [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+}
+
+
+
 /**
 * 
 *资讯详情页

@@ -23,6 +23,9 @@ public class ZhidianEduPlugin extends CordovaPlugin {
         }else if(action.equals("showToast")){ //show tooltip
             callbackContext.success("toast");
             return true;
+        }else if(action.equals("doShare")){ //set share
+            callbackContext.success(args.getString(0));
+            return true;
         }
 
         // news detail page 
